@@ -186,3 +186,16 @@ footer {
 #music-btn:hover {
     background: rgba(31,61,43,0.8);
 }
+
+@media(max-width: 768px){
+    .glass-header {
+        width: 95%;
+        position: sticky;
+        top: 0%;
+    }
+    .glass-header nav a {
+        margin-left: 20px;
+        font-size: 0.875rem;
+        font-weight: 300;
+    }
+}
