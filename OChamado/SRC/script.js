@@ -330,6 +330,7 @@ As luzes do carregador indicam o estado de operação:
 - LED verde → pronto para uso  
 - LED vermelho → erro ou falha  
 - LED apagado → sem energia ou offline
+(use emojis para se referir aos leds ex. led vermelho 🔴...)
 
 
 Nunca responda tudo na mesma linha.
