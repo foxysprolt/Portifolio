@@ -55,6 +55,11 @@ header.glass-header {
     transition: 0.3s ease;
 }
 
+
+.projects a{
+    color: #e0e0e0;
+    text-decoration: none;
+}
 .glass-header nav a:hover {
     color: #e8bd7d; /* Tom dourado suave */
     text-shadow: 0 0 8px rgba(232, 189, 125, 0.5);
