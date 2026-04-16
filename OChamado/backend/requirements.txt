@@ -1,6 +1,3 @@
-flask
-flask-cors
-google-genai
-python-dotenv
-gunicorn
 functions-framework
+groq
+flask

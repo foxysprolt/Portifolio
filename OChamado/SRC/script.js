@@ -1,70 +1,63 @@
-import { promptia } from './artificialinteligenc/promptia.js'
+// Removi o import que pode travar o navegador. 
+// O cérebro lá no Google já tem o promptia.py dentro dele!
 
 let botao = document.querySelector(".botao-ajuda")
 let input = document.querySelector(".caixa-texto")
 let chat = document.querySelector("#chat")
 
-// Endereço do seu "Garçom" Python no Render
+// URL do Google Cloud Functions
 let urlServidor = "https://southamerica-east1-ochamado-ia.cloudfunctions.net/chat_ochamado"
 
+// Começamos o histórico apenas com a saudação inicial
 let historico = [
-    {
-        role: "system",
-        content: promptia
-    },
     {
         role: "assistant",
         content: "Olá! Antes de começarmos, você é um Cliente ou um Funcionário da Power2Go?"
     }
-    // ❌ Removi a palavra "web" que estava sobrando aqui e quebrando o código
 ];
 
 window.onload = () => {
     adicionarMensagem("Olá! Antes de começarmos, você é um Cliente ou um Funcionário da Power2Go?", "bot");
 };
 
-// 1. FUNÇÃO QUE CRIA OS BALÕES NA TELA
 function adicionarMensagem(texto, tipo) {
     let div = document.createElement("div")
     div.classList.add("msg", tipo)
-    // Substitui quebras de linha por <br> para o HTML entender
     div.innerHTML = texto.replace(/\n/g, "<br>")
     chat.appendChild(div)
-    
-    // Faz o chat rolar para baixo automaticamente
     chat.scrollTop = chat.scrollHeight
 }
 
-// 2. FUNÇÃO QUE FAZ A LIGAÇÃO PARA O PYTHON
 async function enviarMensagem() {
     let texto = input.value.trim()
     if (!texto) return
 
-    // Adiciona sua mensagem na tela
     adicionarMensagem(texto, "user")
+    // Adiciona ao histórico local
     historico.push({ role: "user", content: texto }); 
     
     input.value = ""
-
-    // Adiciona o balão de carregamento
     adicionarMensagem("Ochamado: analisando...", "bot")
 
     try {
-        let resposta = await fetch(urlServidor, {
+        const response = await fetch(urlServidor, {
             method: "POST",
             headers: {
+                // Aqui é onde o Google exige que esteja perfeito
                 "Content-Type": "application/json"
             },
+            // Enviamos apenas o histórico de mensagens
             body: JSON.stringify({ historico: historico }) 
         })
 
-        if (!resposta.ok) {
-            throw new Error("Erro no servidor: " + resposta.status)
+        if (!response.ok) {
+            // Se der erro, vamos tentar ler o que o Python respondeu
+            const erroCorpo = await response.json();
+            throw new Error(erroCorpo.erro || "Erro desconhecido");
         }
 
-        let dados = await resposta.json()
+        let dados = await response.json()
         
-        // Remove o balão de "analisando..."
         if (chat.lastChild) chat.lastChild.remove();
 
         let resultado = dados.resposta 
@@ -73,12 +66,11 @@ async function enviarMensagem() {
 
     } catch (erro) {
         if (chat.lastChild) chat.lastChild.remove();
-        adicionarMensagem("Erro: Falha na comunicação com o cérebro.", "bot");
+        adicionarMensagem("Erro: " + erro.message, "bot");
         console.error("Erro detalhado:", erro);
     }
 }
 
-// 3. GATILHOS
 botao.addEventListener("click", enviarMensagem)
 
 input.addEventListener("keydown", function(e) {
