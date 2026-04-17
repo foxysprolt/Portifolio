@@ -9,8 +9,8 @@ body.loading header.header-melin {
 }
 
 body.loading .headerlogo {
-    width: 300px !important; /* Tamanho da logo na entrada */
-    transform: scale(2) !important; /* Aumenta a logo para o centro */
+    height: 300px !important; /* Tamanho da logo na entrada */
+    transform: scale(1.75) !important; /* Aumenta a logo para o centro */
     margin-bottom: 0 !important;
 }
 
