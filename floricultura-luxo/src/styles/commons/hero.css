@@ -1,0 +1,41 @@
+@import url('../components/color.css');
+
+.hero {
+    height: 1000px;
+    width: auto;
+    background: #2D2D2D center/cover;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    padding: 425px 50px 300px 100px;
+}
+.hero h3, button {
+    margin: 20px 0;
+}
+.hero h2 {
+    font-size: 3rem;
+    background: linear-gradient(20deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  -webkit-background-clip: text; /* Corta o fundo no formato das letras */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.hero h3 {
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.hero button {
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 2rem;
+    background: #d3a137;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 10px;
+}
+.hero button:hover {
+    background: #B38728;
+}

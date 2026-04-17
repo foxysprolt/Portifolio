@@ -1,0 +1,16 @@
+:root {
+  /* Cores Principais */
+  --branco-puro: #FFFFFF;
+  --cinza-claro: #F9F9F9;
+  
+  /* Tipografia */
+  --texto-preto: #000000;       /* Preto absoluto para o topo */
+  --texto-escuro: #2D2D2D;
+  --texto-suave: #666666;
+
+  /* Destaque Metálico (Dourado Melin) */
+  --dourado-real: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  --dourado-solido: #D4AF37;
+  
+  --verde-whatsapp: #25D366;
+}

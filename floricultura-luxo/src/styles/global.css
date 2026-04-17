@@ -1,0 +1,4 @@
+@import url('./vendor/reset.css');     /* 1º Limpa */
+@import url('./components/color.css');  /* 2º Define as cores */
+@import url('./commons/header.css'); /* 3º Monta o layout */
+@import url('./commons/hero.css'); /* 3º Monta o hero */

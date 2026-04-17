@@ -1,0 +1,20 @@
+
+---src/app - source - aonde está os arquivos
+    ----pages
+----styles   --> css 
+    ----vendor  --> fornecedor - coisas de terceiros - códigos de outras pessoa
+    ----layouts/commons/shared   --> layouts fixos - tem em todas páginas
+    ----components - padão de botão, padrão de cores - consistencia do design - elementos comuns
+    ----pages  -  css das páginas 
+    ----arquivo dentro de styles - global.css - link todas subpastas de styles em um arquivo
+----scripts   --> js
+    ----vendor  --> fornecedor - coisas de terceiros - códigos de outras pessoa
+    ----services/clients --> consumindo api de terceiros  
+    ----commons/pages/share --> js das páginas 
+----assets/resources  --> imagens/sounds/fonts
+    ----img/images
+        ----header
+        ----footer
+    ----sounds/mp3
+        ----background
+    ----fonts (abaixar woff ou woff2)
