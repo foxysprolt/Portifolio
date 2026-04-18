@@ -5,9 +5,10 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: left;
     color: white;
-    padding: 200px 50px 300px 75px;
+    padding-left: 50px;
 
 }
 .hero h3, button {

@@ -1,0 +1,19 @@
+.dif {
+    display: flex;
+    height: 240px;
+    justify-content: center;
+
+}
+
+.dif-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 75px;
+
+}
+
+.dif-box i{
+
+
+}

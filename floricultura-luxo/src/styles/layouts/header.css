@@ -44,10 +44,7 @@ header.header-melin nav ul li a {
     transition: 0.3s;
 }
 
-/* SÓ O INÍCIO PRETO (FIXO) */
-header.header-melin nav ul li:first-child a {
-    color: var(--texto-preto) !important;
-}
+
 
 /* ============================================================
    3. ESTADO AO ROLAR (.rolagem)

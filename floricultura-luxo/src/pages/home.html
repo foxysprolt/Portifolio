@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melin Flores de Luxo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="../styles/global.css">
 </head>
-<body class="loading">
-<header class="header-melin">
-    <img src="../assets/img/logo1.svg" class="headerlogo">
-    <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">coleções</a></li>
-          <li><a href="#">Best sellers</a></li>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+
+  <body class="loading">
+    <header class="header-melin">
+        <img src="../assets/img/logo1.svg" class="headerlogo">
+        <nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">coleções</a></li>
+              <li><a href="#wrapper">Best sellers</a></li>
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <section class="hero">
     <h2 >Transforme momentos <br>em memórias</h2>
     <h3>Presentes, Surpresas e Experiências</h3>
     <button>ver coleções</button>
     </section>
 
-    <!-- <section style="height: 100vh; background: #f4f4f4; display: flex; align-items: center; justify-content: center; padding-top: 140px;">
-        <h1 style="color: #333; font-size: 2.5rem;">Role para baixo</h1>
-    </section>
-    <section style="height: 100vh; background: #ffffff;">
-    </section> -->
 
-    <section class="wrapper">
+    <section id="wrapper" class="wrapper">
       <p>Nossos queridinhos (Best Sellers)</p>
+    <div class="container">
 
       <div class="box">
         <img src="../assets/flores/buque_de_flores_do_campo-1024x1024.webp" >
@@ -41,7 +41,53 @@
         <button>Ver detalhes</button>
       </div>
 
-      
+      <div class="box">
+        <img src="../assets/flores/buque_de_flores_do_campo-1024x1024.webp" >
+        <h3>Buque de Flores do Campo</h3>
+        <h2>R$ 199,90</h2>
+        <button>Ver detalhes</button>
+      </div>
+
+      <div class="box">
+        <img src="../assets/flores/buque_de_flores_do_campo-1024x1024.webp" >
+        <h3>Buque de Flores do Campo</h3>
+        <h2>R$ 199,90</h2>
+        <button>Ver detalhes</button>
+      </div>
+
+      <div class="box">
+        <img src="../assets/flores/buque_de_flores_do_campo-1024x1024.webp" >
+        <h3>Buque de Flores do Campo</h3>
+        <h2>R$ 199,90</h2>
+        <button>Ver detalhes</button>
+      </div>
+    </div>
+    </section>
+
+    <section class="dif">
+
+      <div class="dif-box">
+        <i data-lucide="truck"></i>
+        <h2>Envio em 3 Horas*</h2>   
+        <h3>*sujeito região</h3>     
+      </div>
+
+      <div class="dif-box">
+        <i data-lucide="flower-2"></i>
+        <h2>Flores de alto padrão</h2>    
+      </div>
+
+       <div class="dif-box">
+        <i data-lucide="lock"></i>
+        <h2>Pagamento 100% Seguro</h2>        
+       </div>
+
+       <div class="dif-box">
+        <i data-lucide="gift"></i>
+        <h2>Embalagem de presente</h2>        
+      </div>
+
+
     </section>
 
 
@@ -49,17 +95,9 @@
 
 
 
+    
 
-
-
-
-
-
-
-
-
-
-        <section id="map" class="map">
+    <section id="map" class="map">
           <div style="width: 100%">
             <iframe
               width="100%"
@@ -74,11 +112,18 @@
               </a>
             </iframe>
           </div>
-        </section>
-      </main>
-      <footer>
+    </section>
+
+
+   <footer>
         <p>&copy; 2026 Melin Flores de Luxo. Todos os direitos reservados.</p>
-      </footer> 
-    <script src="../scripts/pages/home.js"></script>
-</body>
+   </footer> 
+
+
+  <script src="../scripts/pages/home.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  </body>
 </html>
